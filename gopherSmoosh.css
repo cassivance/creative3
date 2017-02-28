@@ -4,13 +4,16 @@
 	border: 1px solid black;
 	float: left;
 	/* default background is blank, will randomly reset the background of random number of cells for a random number of milliseconds */
+	/*
 	background-image: url('gopherSmoosh.jpg');
 	background-repeat: no repeat;
 	background-size: 100% 100%;
-	
+	*/
 	margin: 5px;
 }
 
 .display-img{
-	url: ('gopherSmoosh.jpg');
+	background-image: url ('gopherSmoosh.jpg');
+	background-repeat: no repeat;
+	background-size: 100% 100%;
 }

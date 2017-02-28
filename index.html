@@ -26,13 +26,13 @@
 	
 	
 	<body>
-		<div class='center-block'>
+		<div class='col-md-6 col-md-offset-3 text-center'>
 			<h1>Gopher Smoosh</h1>
 		</div>
 	
 		<div ng-app='app' ng-controller='mainControl'>
 			<div class='col-md-8 col-md-offset-2'>
-				
+				<div class='display-cell' ng-click='imageClick ($event)' ng-repeat='i in grid' id='{{$index}}'></div>
 			</div>
 		</div>
 	</body>

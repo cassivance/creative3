@@ -29,7 +29,7 @@ function mainControl ($scope, $interval, $timeout)
     $interval (randomIndices, 1000 * 3, 20);
 
     function endScore(){
-        if($scope.score/$scope.total > .9)
+        if($scope.score/$scope.total > .8)
         {
             aler("You Win!");
         }

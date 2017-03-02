@@ -5,7 +5,7 @@ app.controller('mainControl', mainControl);
 function mainControl($scope, $interval, $timeout) {
     $timeout(endScore, 60000);
 
-    $interval(randomIndices, 1000 * 6, 20); 
+    $interval(randomIndices, 1000 * 3, 20); 
 
     $scope.playing = true;
     $scope.score = 0;

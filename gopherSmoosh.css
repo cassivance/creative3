@@ -13,7 +13,7 @@
 }
 
 .display-img{
-	background-image: url ('gopherSmoosh.jpg');
-	background-repeat: no repeat;
+	background-image: url('gopherSmoosh.jpg');
+	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }

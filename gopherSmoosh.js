@@ -5,16 +5,14 @@ app.controller('mainControl', mainControl);
 function mainControl($scope, $interval, $timeout) {
     $timeout(endScore, 60000);
 
-    $interval(randomIndices, 1000 * 3, 20); 
+    $interval(randomIndices, 1000 * 6, 20); 
 
     $scope.playing = true;
-
     $scope.score = 0;
     $scope.total = 0;
-
-    //Instantiate the number of display divs to generate with 'ng-repeat' in "index.html"
     $scope.grid = [];
 
+    //Instantiate the number of display divs to generate with 'ng-repeat' in "index.html"
     for (var i = 0; i < 55; i++) {
         $scope.grid.push(i);
     }
@@ -54,10 +52,9 @@ function mainControl($scope, $interval, $timeout) {
         let ind = Number($scope.imgResets.indexOf(Number(event.target.id)));
 
         if ($scope.imgResets.indexOf(Number(event.target.id)) > -1) {
-            console.log("HERE");
             $scope.score++;
-            $scope.imgResets.splice(ind, ind + 1);
-            console.log("Score:", $scope.score);
+            $scope.imgResets.splice(ind, 1);
+            console.log($scope.imgResets);
 
         }
     }

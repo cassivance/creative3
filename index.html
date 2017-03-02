@@ -2,36 +2,25 @@
 
 <html>
 	<head>
-		<title>Gopher Smoosh</title>
-		
+		<title>Gopher Smoosh</title>		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 		<link rel="stylesheet" type="text/css" href="gopherSmoosh.css">
-  
-  
 		<!-- jQuery CDN -->
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-			
 		<!-- Latest compiled and minified BOOTSTRAP JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	
 		<!-- Angular -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-		
 		<!-- gopherSmoosh Angular -->
 		<script src='gopherSmoosh.js'></script>
 	</head>
-	
-	
-	
-	
+
 	<body>
 		<div class='col-md-6 col-md-offset-3 text-center'>
 			<h1>Gopher Smoosh</h1>
 		</div>
-		<div ng-model="score" ng-init=0 >Score: {{score}}</div>
-	
 		<div ng-app='app' ng-controller='mainControl'>
+			<div ng-model="score"> Score: {{score}} / {{total}}</div>
 			<div class='col-md-8 col-md-offset-2'>
 				<div class='display-cell' ng-click='imageClick ($event)' ng-class="{'display-img': isDisplayed(i)}" ng-repeat='i in grid' id='{{$index}}'>
 				</div>

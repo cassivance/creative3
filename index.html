@@ -20,10 +20,13 @@
 			<h1>Gopher Smoosh</h1>
 		</div>
 		<div ng-app='app' ng-controller='mainControl'>
-			<div ng-model="score"> Score: {{score}} / {{total}}</div>
+			<div id="replaceThis" >
+			<div id="runningScore" ng-model="score"> Score: {{score}} / {{total}}</div>
 			<div class='col-md-8 col-md-offset-2'>
-				<div class='display-cell' ng-click='imageClick ($event)' ng-class="{'display-img': isDisplayed(i)}" ng-repeat='i in grid' id='{{$index}}'>
+				<div ng-show="playing" class='display-cell' ng-click='imageClick ($event)' ng-class="{'display-img': isDisplayed(i)}" ng-repeat='i in grid' id='{{$index}}'>
 				</div>
+				<div ng-hide="playing" class="finalScore"><p ng-model="final">{{final}}</p></div>
+			</div>
 			</div>
 		</div>
 	</body>
